@@ -1,0 +1,92 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">{{ PageTitle }}</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <a class="btn btn-info" href="#/newteam"><i class="fa fa-plus"></i> Add New Team</a>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="progress" data-ng-show="isBusy">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">Loading Teams...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Eastern Division
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Team</th>
+                                <th>Owner</th>
+                                <th>Division</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="i in easternTeams" data-ng-click="editTeam(i.TeamId)">
+                                <td>{{ i.TeamId }}</td>
+                                <td>{{ i.Name }}</td>
+                                <td>{{ i.Owner }}</td>
+                                <td>{{ i.Division }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Western Division
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Team</th>
+                                <th>Owner</th>
+                                <th>Division</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="i in westernTeams" data-ng-click="editTeam(i.TeamId)">
+                                <td>{{ i.TeamId }}</td>
+                                <td>{{ i.Name }}</td>
+                                <td>{{ i.Owner }}</td>
+                                <td>{{ i.Division }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+
+
+

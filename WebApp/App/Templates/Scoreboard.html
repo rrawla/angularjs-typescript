@@ -1,0 +1,40 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">{{ PageTitle }}</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row well" data-ng-repeat="i in games">
+    <div class="col-lg-5 ">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="huge">{{ i.AwayTeam.Name }}</div>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ i.AwayTeamScore }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 text-center vertical-middle">
+        <i class="fa fa-at fa-5x"></i>
+    </div>
+    <div class="col-lg-5">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="huge">{{ i.HomeTeam.Name }}</div>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ i.HomeTeamScore }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

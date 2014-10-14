@@ -1,0 +1,48 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">{{ PageTitle }}</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <form class="form-horizontal" name="teamForm" novalidate data-ng-submit="save()" role="form">
+            <div class="form-group">
+                <label class="col-sm-1" for="name">Name</label>
+                <div class="col-sm-3">
+                    <input class="form-control" name="name" type="text" data-ng-model="currentTeam.Name" required data-ng-minlength="4" />
+                </div>
+                <span class="error" data-ng-show="teamForm.name.$error.required">*</span>
+                <span class="error" data-ng-show="teamForm.name.$error.minlength">Minimum 4 Characters</span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1" for="owner">Owner</label>
+                <div class="col-sm-3">
+                    <input class="form-control" name="owner" type="text" data-ng-model="currentTeam.Owner" required data-ng-minlength="4" />
+                </div>
+                <span class="error" data-ng-show="teamForm.owner.$error.required">*</span>
+                <span class="error" data-ng-show="teamForm.owner.$error.minlength">Minimum 4 Characters</span>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1" for="owner">Division</label>
+                <div class="col-sm-1">
+                    <label>
+                        <input name="eastern" type="radio" value="Eastern" data-ng-model="currentTeam.Division" required />
+                        Eastern
+                    </label>
+                </div>
+                <div class="col-sm-1">
+                    <label>
+                        <input name="western" type="radio" value="Western" data-ng-model="currentTeam.Division" required />
+                        Western
+                    </label>
+                </div>
+            </div>
+            <div>
+                <input type="submit" class="btn btn-success" value="Save" data-ng-disabled="teamForm.$invalid" />
+                <a href="#/" class="btn btn-danger">Cancel</a>
+            </div>
+    </form>
+</div>
+
+
+
